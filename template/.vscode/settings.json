@@ -1,13 +1,17 @@
 {
   "prettier.eslintIntegration": true,
   "prettier.stylelintIntegration": true,
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
+  "editor.formatOnSave": false,
+  "editor.formatOnPaste": false,
   "prettier.semi": false,
   "eslint.autoFixOnSave": true,
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
+  "[css]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+  },
   "eslint.validate": [
     "javascript",
     "javascriptreact",
