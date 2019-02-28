@@ -5,7 +5,7 @@
   "author": "{{ author }}",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --inline --progress --config deploy/webpack.dev.conf.js",
     "start": "npm run dev",
     "dev:test": "cross-env NODE_ENV=test npm run dev",
     {{#if_eq runner "jest"}}
@@ -24,8 +24,8 @@
     "eslint": "eslint --ext .js,.vue src{{#unit}} test/unit{{/unit}}{{#e2e}} test/e2e/specs{{/e2e}}",
     "stylelint": "stylelint --ext .css,.vue src{{#unit}} test/unit{{/unit}}{{#e2e}} test/e2e/specs{{/e2e}}",
     {{/lint}}
-    "build": "node build/build.js",
-    "build:test": "cross-env NODE_ENV=test node build/build.js"
+    "build": "node deploy/build.js",
+    "build:test": "cross-env NODE_ENV=test npm run build"
   },
   "dependencies": {
     "vue": "^2.5.2"{{#router}},
